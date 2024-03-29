@@ -2,9 +2,12 @@ name: Release
 
 on:
   push:
+    branches:
+      - main
+      - release-*
+      - test-*
     tags:
-      - release-v*
-
+      - v*
 jobs:
   release:
     runs-on: ubuntu-latest
